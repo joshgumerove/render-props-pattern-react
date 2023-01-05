@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Input = (props) => {
+const Input = ({ renderTextBelow }) => {
   const [value, setValue] = useState(null);
 
   const handleChange = (e) => {
@@ -10,7 +10,7 @@ const Input = (props) => {
     <>
       <input value={value} onChange={handleChange} />
       <br />
-      <p> {props.renderTextBelow(value)} </p>
+      <p> {renderTextBelow(value)} </p>
     </>
   );
 };

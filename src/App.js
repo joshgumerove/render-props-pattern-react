@@ -2,20 +2,16 @@ import "./App.css";
 import Input from "./Input";
 
 function App() {
+  const showValue = (value) => <>The value is {value}</>;
+
+  const multiplyByTen = (value) => <>The multiplied value is {value * 10}</>;
+
   return (
     <div className="App">
       <h1>Render Props</h1>
-      <Input
-        renderTextBelow={(value) => {
-          return <>The value is {value}</>;
-        }}
-      />
+      <Input renderTextBelow={showValue} />
 
-      <Input
-        renderTextBelow={(value) => {
-          return <>The multiplied value is {value * 10}</>;
-        }}
-      />
+      <Input renderTextBelow={multiplyByTen} />
     </div>
   );
 }
